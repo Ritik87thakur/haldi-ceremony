@@ -194,7 +194,7 @@ this.dom.heartCollage.innerHTML = "";
 
             const img=document.createElement("img");
 
-            img.src=`images/1 (${index+1}).png`;
+            img.src=`1 (${index+1}).png`;
 
             img.className="heart-img";
 
@@ -225,7 +225,7 @@ this.dom.heartCollage.innerHTML = "";
             this.dom.heroSlideshow.innerHTML = "";
             for (let i = 1; i <= this.state.brideImagesCount; i++) {
                 const img = document.createElement('img');
-                img.src = `images/1 (${i}).png`;
+                img.src = `1 (${i}).png`;
                 img.alt = 'Wedding Portrait Hero';
                 img.className = 'hero-slide';
                 if (i === 1) img.classList.add('active');
@@ -250,7 +250,7 @@ this.dom.heartCollage.innerHTML = "";
                 card.className = 'carousel-card';
                 
                 const img = document.createElement('img');
-                img.src = `images/1 (${i}).png`;
+                img.src = `1 (${i}).png`;
                 img.alt = `Bride Portrait ${i}`;
                 img.loading = 'lazy';
                 
@@ -281,7 +281,7 @@ this.dom.heartCollage.innerHTML = "";
                 item.className = 'gallery-item';
                 
                 const img = document.createElement('img');
-                img.dataset.src = `images/1 (${i}).png`;
+                img.dataset.src = `1 (${i}).png`;
                 img.alt = `Haldi Ceremony Ceremony Image ${i}`;
                 img.loading = 'lazy';
                 
@@ -360,7 +360,7 @@ this.dom.heartCollage.innerHTML = "";
         // Core image injection
     loadImageInViewer(index){
 
-        const imagePath = `images/1 (${index}).png`;
+        const imagePath = `1 (${index}).png`;
 
         this.dom.lightboxImg.style.opacity="0";
         this.dom.lightboxImg.style.transform="scale(.96) rotateY(12deg)";
@@ -463,10 +463,10 @@ this.dom.heartCollage.innerHTML = "";
             const prevIndex = currentIndex - 1 < 1 ? this.state.imagesCount : currentIndex - 1;
             
             const preloaderNext = new Image();
-            preloaderNext.src = `images/1 (${nextIndex}).png`;
+            preloaderNext.src = `1 (${nextIndex}).png`;
 
             const preloaderPrev = new Image();
-            preloaderPrev.src = `images/1 (${prevIndex}).png`;
+            preloaderPrev.src = `1 (${prevIndex}).png`;
         },
 
         // RESET ZOOM STATES
@@ -716,7 +716,7 @@ this.dom.heartCollage.innerHTML = "";
 
         const img = document.createElement("img");
 
-        img.src = `images/1 (${photos[index]}).png`;
+        img.src = `1 (${photos[index]}).png`;
 
         img.alt = "";
 
