@@ -1,0 +1,283 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Haldi Ceremony Digital Album</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Premium Wedding Feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Canvas for Floating Marigolds and Golden Sparkles -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- Background Music -->
+    <audio id="bg-music" src="music/music.mp3" loop preload="auto"></audio>
+
+    <!-- WELCOME SCREEN -->
+    <section id="welcome-screen" class="welcome-screen">
+        <!-- Left Side: Heart Shape Photo Collage -->
+        <div class="welcome-left">
+            <div class="heart-collage-container" id="heart-collage">
+                <!-- Programmatically filled with 33 bride photos in a heart shape -->
+            </div>
+        </div>
+
+        <!-- Right Side: Luxury Welcome Card -->
+        <div class="welcome-right">
+            <div class="luxury-card">
+                <div class="card-border-glow"></div>
+                <div class="card-content">
+                    <span class="traditional-tag">शुभ हल्दी • Shubh Haldi</span>
+                    <h1 class="wedding-title">Haldi Ceremony</h1>
+                    
+                    <div class="hero-portrait-container">
+                        <div class="frame-accent top-left"></div>
+                        <div class="frame-accent top-right"></div>
+                        <div class="frame-accent bottom-left"></div>
+                        <div class="frame-accent bottom-right"></div>
+                        <!-- Auto-transitioning Hero Portraits (1-33) -->
+                        <div class="hero-slideshow" id="hero-slideshow"></div>
+                    </div>
+
+                    <h2 class="bride-name">The Divine Bride</h2>
+                    
+                    <div class="elegant-divider">
+                        <span class="divider-diamond">♦</span>
+                    </div>
+
+                    <p class="invitation-text">
+                        We cordially invite you to witness the golden celebration of love, laughter, and beautiful traditions. Step into our digital gallery of cherished moments.
+                    </p>
+
+                    <button id="btn-open-album" class="btn-open-album">
+                        <span class="btn-text">Open Digital Album</span>
+                        <span class="btn-shine"></span>
+                    </button>
+                    <div class="made-by">
+    Made with ❤️ by ritik Thakur
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN ALBUM -->
+    <main id="main-album" class="main-album hidden">
+        <!-- Luxury Header -->
+        <header class="album-header">
+
+    <div class="header-bg">
+
+        <div class="header-track">
+
+            <!-- JavaScript यहाँ 4 Photos Auto Add करेगा -->
+
+        </div>
+
+    </div>
+
+    <div class="header-overlay"></div>
+
+    <div class="header-content">
+
+        <span class="header-sub">
+            Celebrating The Golden Glow
+        </span>
+
+        <h2 class="header-title">
+            Haldi Ceremony Memories
+        </h2>
+
+        <div class="elegant-divider">
+
+            <span class="divider-diamond">
+                ♦
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+        <!-- Bride Showcase (Interactive Horizontal Carousel) -->
+        <section class="showcase-section">
+            <div class="section-title-wrapper">
+                <h3 class="section-title">The Gorgeous Bride</h3>
+                <p class="section-subtitle">Stunning portraits of the bride radiating pure happiness</p>
+            </div>
+            <div class="showcase-carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="showcase-prev" aria-label="Previous">⟨</button>
+                <div class="showcase-carousel" id="showcase-carousel">
+                    <!-- Loaded dynamically with images 1-33 -->
+                </div>
+                <button class="carousel-btn next-btn" id="showcase-next" aria-label="Next">⟩</button>
+            </div>
+        </section>
+
+        <!-- Entire Gallery (1-103 Masonry Grid) -->
+        <section class="gallery-section">
+            <div class="section-title-wrapper">
+                <h3 class="section-title">The Wedding Chronicles</h3>
+                <p class="section-subtitle">A collection of joyous moments, laughter, and dynamic rituals </p>
+            </div>
+            <div class="gallery-masonry" id="gallery-grid">
+                <!-- Programmatically populated with images 1 to 103 -->
+            </div>
+        </section>
+<!-- =========================
+        VIDEO GALLERY
+========================= -->
+
+<section class="video-gallery">
+
+    <div class="section-title-wrapper">
+
+        <h3 class="section-title">
+            Dance & Fun Moments
+        </h3>
+
+        <p class="section-subtitle">
+            Every Dance, Every Smile, Every Memory ❤️
+        </p>
+
+    </div>
+
+    <div class="video-container">
+
+        <div class="video-item" data-video="videos/dance1.mp4">
+            <video muted preload="metadata">
+    <source src="videos/dance1.mp4" type="video/mp4">
+</video>
+            <div class="video-overlay">
+                <div class="play-btn">▶</div>
+                <span>Dance Performance 1</span>
+            </div>
+        </div>
+
+        <div class="video-item" data-video="videos/dance2.mp4">
+            <video muted preload="metadata">
+    <source src="videos/dance2.mp4" type="video/mp4">
+</video>
+            <div class="video-overlay">
+                <div class="play-btn">▶</div>
+                <span>Dance Performance 2</span>
+            </div>
+        </div>
+
+        <div class="video-item" data-video="videos/dance3.mp4">
+            <video muted preload="metadata">
+    <source src="videos/dance3.mp4" type="video/mp4">
+</video>
+            <div class="video-overlay">
+                <div class="play-btn">▶</div>
+                <span>Dance Performance 3</span>
+            </div>
+        </div>
+
+        <div class="video-item" data-video="videos/dance4.mp4">
+            <video muted preload="metadata">
+    <source src="videos/dance4.mp4" type="video/mp4">
+</video>
+            <div class="video-overlay">
+                <div class="play-btn">▶</div>
+                <span>Dance Performance 4</span>
+            </div>
+        </div>
+
+        <div class="video-item" data-video="videos/dance5.mp4">
+            <video muted preload="metadata">
+    <source src="videos/dance5.mp4" type="video/mp4">
+</video>
+            <div class="video-overlay">
+                <div class="play-btn">▶</div>
+                <span>Dance Performance 5</span>
+            </div>
+        </div>
+
+        <div class="video-item" data-video="videos/dance6.mp4">
+            <video muted preload="metadata">
+    <source src="videos/dance6.mp4" type="video/mp4">
+</video>
+            <div class="video-overlay">
+                <div class="play-btn">▶</div>
+                <span>Dance Performance 6</span>
+            </div>
+        </div>
+
+        <div class="video-item" data-video="videos/dance7.mp4">
+            <video muted preload="metadata">
+    <source src="videos/dance7.mp4" type="video/mp4">
+</video>
+            <div class="video-overlay">
+                <div class="play-btn">▶</div>
+                <span>Dance Performance 7</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+        <!-- Dynamic Page Footer -->
+        <footer class="album-footer">
+            <p class="footer-blessing">With Love and Warm Blessings</p>
+            <div class="elegant-divider">
+                <span class="divider-diamond">♦</span>
+            </div>
+            <p class="footer-credits">Crafted with ❤️ by Ritik Thakur</p>
+        </footer>
+    </main>
+
+    <!-- LIGHTBOX / FULLSCREEN VIEWER -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close View">&times;</button>
+        
+        <button class="lightbox-nav nav-prev" id="lightbox-prev" aria-label="Previous Image">⟨</button>
+        <button class="lightbox-nav nav-next" id="lightbox-next" aria-label="Next Image">⟩</button>
+
+        <div class="lightbox-stage" id="lightbox-stage">
+
+    <div class="lightbox-flip" id="lightbox-flip">
+
+       <div class="lightbox-zoom-container" id="lightbox-zoom-container">
+
+    <img id="lightbox-img" src="" alt="Full Screen Display">
+
+</div>
+
+</div>
+
+    </div>
+
+</div>
+
+        <div class="lightbox-meta">
+            <span class="image-counter" id="image-counter">00 / 00</span>
+        </div>
+    </div>
+<!-- VIDEO POPUP -->
+
+<div id="video-popup" class="video-popup">
+
+    <div class="video-popup-content">
+
+        <button id="video-close">&times;</button>
+
+        <video id="popup-video" controls>
+
+            <source src="" type="video/mp4">
+
+        </video>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
