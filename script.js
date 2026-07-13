@@ -75,7 +75,7 @@
         this.startHeaderBanner();
         this.buildShowcaseCarousel();
         this.renderGallery();
-      // this.initVideoGallery();
+      this.initVideoGallery();
         this.bindEvents();
     },
 
