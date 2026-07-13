@@ -819,7 +819,7 @@ this.dom.heartCollage.innerHTML = "";
                 this.dom.bgMusic.pause();
             }
 
-            this.dom.popupVideo.play().catch(() => {});
+           // this.dom.popupVideo.play().catch(() => {});
 
         });
 
