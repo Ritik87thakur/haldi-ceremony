@@ -840,3 +840,8 @@ this.dom.heartCollage.innerHTML = "";
     });
 
 },
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    Album.init();
+});
