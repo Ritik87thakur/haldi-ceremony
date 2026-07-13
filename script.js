@@ -742,69 +742,8 @@ this.dom.heartCollage.innerHTML = "";
         setInterval(loadImages,5000);
 
     },
-    initVideoGallery() {
-
-        const videos = document.querySelectorAll(".video-item");
-
-        videos.forEach(item => {
-
-            item.addEventListener("click", () => {
-
-                const videoSrc = item.dataset.video;
-
-this.dom.popupVideo.pause();
-
-this.dom.popupVideo.src = videoSrc;
-
-this.dom.videoPopup.classList.add("active");
-
-if (this.dom.bgMusic) {
-    this.dom.bgMusic.pause();
-}
-
-this.dom.popupVideo.onloadeddata = () => {
-    this.dom.popupVideo.play();
-};
-
-this.dom.popupVideo.load();
-};
-
-if (this.dom.bgMusic) {
-    this.dom.bgMusic.pause();
-});
-
-        });
-
-        this.dom.videoClose.addEventListener("click", () => {
-
-            this.dom.popupVideo.pause();
-
-            this.dom.popupVideo.currentTime = 0;
-
-            this.dom.popupVideo.src = "";
-
-            this.dom.videoPopup.classList.remove("active");
-
-            if(this.dom.bgMusic){
-
-                this.dom.bgMusic.play();
-
-            }
-
-        });
-
-        this.dom.videoPopup.addEventListener("click",(e)=>{
-
-            if(e.target===this.dom.videoPopup){
-
-                this.dom.videoClose.click();
-
-            }
-
-        });
-
-    },
-        renderAmbientFrame() {
+    
+    renderAmbientFrame() {
             const ctx = this.state.canvasCtx;
             ctx.clearRect(0, 0, this.state.canvasWidth, this.state.canvasHeight);
 
