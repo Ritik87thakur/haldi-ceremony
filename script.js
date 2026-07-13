@@ -804,9 +804,13 @@ this.dom.heartCollage.innerHTML = "";
     videos.forEach(item => {
 
         item.addEventListener("click", () => {
-                        
-            this.dom.popupVideo.src = videoSrc;
 
+            const videoSrc = item.dataset.video;
+
+            this.dom.popupVideo.pause();
+            this.dom.popupVideo.currentTime = 0;
+
+            this.dom.popupVideo.src = videoSrc;
             this.dom.popupVideo.load();
 
             this.dom.videoPopup.classList.add("active");
@@ -815,7 +819,7 @@ this.dom.heartCollage.innerHTML = "";
                 this.dom.bgMusic.pause();
             }
 
-            this.dom.popupVideo.play().catch(()=>{});
+            this.dom.popupVideo.play().catch(() => {});
 
         });
 
@@ -830,15 +834,9 @@ this.dom.heartCollage.innerHTML = "";
         this.dom.videoPopup.classList.remove("active");
 
         if (this.dom.bgMusic) {
-            this.dom.bgMusic.play().catch(()=>{});
+            this.dom.bgMusic.play().catch(() => {});
         }
 
     });
 
-}
-    };
-
-    // Start album application lifecycle
-    document.addEventListener('DOMContentLoaded', () => {
-        Album.init();
-    });
+},
