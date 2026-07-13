@@ -75,7 +75,7 @@
         this.startHeaderBanner();
         this.buildShowcaseCarousel();
         this.renderGallery();
-     this.initVideoGallery();
+      // this.initVideoGallery();
         this.bindEvents();
     },
 
@@ -804,6 +804,7 @@ this.dom.heartCollage.innerHTML = "";
     videos.forEach(item => {
 
         item.addEventListener("click", () => {
+            alert("Video Clicked");
 
             const videoSrc = item.dataset.video;
 
