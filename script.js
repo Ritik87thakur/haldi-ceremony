@@ -75,7 +75,7 @@
         this.startHeaderBanner();
         this.buildShowcaseCarousel();
         this.renderGallery();
-        this.initVideoGallery();
+      // this.initVideoGallery();
         this.bindEvents();
     },
 
@@ -796,7 +796,48 @@ this.dom.heartCollage.innerHTML = "";
                     this.state.particles[i] = this.createParticle(false);
                 }
             }
+        },
+        initVideoGallery() {
+
+    const videos = document.querySelectorAll(".video-item");
+
+    videos.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const videoSrc = item.dataset.video;
+
+            this.dom.popupVideo.src = videoSrc;
+
+            this.dom.popupVideo.load();
+
+            this.dom.videoPopup.classList.add("active");
+
+            if (this.dom.bgMusic) {
+                this.dom.bgMusic.pause();
+            }
+
+            this.dom.popupVideo.play().catch(()=>{});
+
+        });
+
+    });
+
+    this.dom.videoClose.addEventListener("click", () => {
+
+        this.dom.popupVideo.pause();
+
+        this.dom.popupVideo.currentTime = 0;
+
+        this.dom.videoPopup.classList.remove("active");
+
+        if (this.dom.bgMusic) {
+            this.dom.bgMusic.play().catch(()=>{});
         }
+
+    });
+
+}
     };
 
     // Start album application lifecycle
