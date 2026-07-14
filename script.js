@@ -254,9 +254,9 @@ const scale = Math.min(
 
             img.loading="lazy";
 
-            img.style.left=`calc(50% + ${point[0]}px)`;
+            img.style.left = `calc(50% + ${point[0] * scale}px)`;
 
-            img.style.top=`calc(50% + ${point[1]}px)`;
+img.style.top = `calc(50% + ${point[1] * scale}px)`;
 
             img.style.transform="translate(-50%,-50%)";
 
