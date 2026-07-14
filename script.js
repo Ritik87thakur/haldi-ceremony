@@ -71,6 +71,11 @@
         this.startMusic();
         this.initAmbientEngine();
         this.buildHeartCollage();
+        setTimeout(() => {
+
+    this.buildHeartCollage();
+
+}, 300);
         this.buildHeroSlideshow();
         this.startHeaderBanner();
         this.buildShowcaseCarousel();
