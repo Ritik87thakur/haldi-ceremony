@@ -94,20 +94,9 @@
 
     // Image पर Click होगा तो Close नहीं होगा
     if (
-
-    this.dom.lightboxZoom.contains(e.target) ||
-
-    e.target === this.dom.lightboxPrev ||
-
-    e.target === this.dom.lightboxNext ||
-
-    e.target === this.dom.lightboxClose
-
-){
-    return;
-}
-
-this.closeViewer();
+        e.target === this.dom.lightboxImg ||
+        this.dom.lightboxZoom.contains(e.target)
+    ) {
         return;
     }
 
@@ -256,9 +245,11 @@ const scale = Math.min(
             img.alt=`Bride ${index+1}`;
 
             img.loading="lazy";
-img.style.left = `calc(50% + ${point[0] * scale}px)`;
 
-img.style.top = `calc(50% + ${point[1] * scale}px)`;
+            img.style.left=`calc(50% + ${point[0]}px)`;
+
+            img.style.top=`calc(50% + ${point[1]}px)`;
+
             img.style.transform="translate(-50%,-50%)";
 
             img.addEventListener("click",()=>{
