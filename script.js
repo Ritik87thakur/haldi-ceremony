@@ -96,7 +96,7 @@
     
     if (
 
-        this.dom.lightboxZoom.contains(e.target) ||
+        e.target.closest("#lightbox-zoom-container") ||
 
         e.target === this.dom.lightboxPrev ||
 
