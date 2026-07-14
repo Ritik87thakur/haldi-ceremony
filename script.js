@@ -213,6 +213,7 @@ window.addEventListener("orientationchange", rebuildHeart);
             }
         },
     buildHeartCollage() {
+        console.log("Heart Function Started");
 this.dom.heartCollage.innerHTML = "";
         const coords = [
 
@@ -274,6 +275,7 @@ img.style.top = `calc(50% + ${point[1] * scale}px)`;
             this.dom.heartCollage.appendChild(img);
 
         });
+        console.log("Images Added :", this.dom.heartCollage.children.length);
 
     },
 
